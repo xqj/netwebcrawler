@@ -7,5 +7,7 @@ namespace WebCrawler.CrawlerServiceInterface
 {
     public interface DetectorInterface
     {
+        /// <param name="url">visit url</param>
+        void Scan(string url);
     }
 }
