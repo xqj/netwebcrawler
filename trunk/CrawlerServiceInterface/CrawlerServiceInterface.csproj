@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5899E1D8-77A3-4976-B559-F0DA29E42ACC}</ProjectGuid>
+    <ProjectGuid>{A0A7D328-81A2-48D7-94D4-07BAAC07F5CF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WebCrawler.Analyze</RootNamespace>
-    <AssemblyName>WebCrawler.Analyze</AssemblyName>
+    <RootNamespace>WebCrawler.CrawlerServiceInterface</RootNamespace>
+    <AssemblyName>WebCrawler.CrawlerServiceInterface</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

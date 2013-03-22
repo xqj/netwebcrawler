@@ -7,8 +7,8 @@
     <ProjectGuid>{627492C7-D995-4132-A49F-0EFC6797F080}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Detector</RootNamespace>
-    <AssemblyName>Detector</AssemblyName>
+    <RootNamespace>WebCrawler.Detector</RootNamespace>
+    <AssemblyName>WebCrawler.Detector</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
