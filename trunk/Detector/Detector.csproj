@@ -57,6 +57,10 @@
       <Project>{a0a7d328-81a2-48d7-94d4-07baac07f5cf}</Project>
       <Name>CrawlerServiceInterface</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{8a3a76a7-0500-42b9-8812-3df2e651ba89}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

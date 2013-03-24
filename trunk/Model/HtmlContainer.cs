@@ -5,31 +5,31 @@ using System.Text;
 
 namespace WebCrawler.Model
 {
-    public class TextContainer
+    public class HtmlContainer
     {
-        private List<string> _TextCollections = new List<string>();
-        private static TextContainer _Instance = new TextContainer();
-        public static TextContainer Instance
+        private List<string> _HtmlContainer = new List<string>();
+        private static HtmlContainer _Instance = new HtmlContainer();
+        public static HtmlContainer Instance
         {
             get { return _Instance; }
         }
-        public List<String> TextCollections
+        public List<String> HtmlContainer
         {
             get
             {
-                return _TextCollections;
+                return _HtmlContainer;
             }           
         }
         public string Get()
         {
-            if(_TextCollections.Count>0)
-                return _TextCollections[0];
+            if(_HtmlContainer.Count>0)
+                return _HtmlContainer[0];
             else
                 return null;
         }
         public void Add(string newText)
         {
-            _TextCollections.Add(newText);
+            _HtmlContainer.Add(newText);
         }
     }
 }
