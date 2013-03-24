@@ -8,7 +8,19 @@ namespace WebCrawler.Model
     public class UrlContainer
     {
         private List<String> _UrlConllections = new List<string>();
-        public List<String> UrlConllections
+        private static UrlContainer _Instance = new UrlContainer();
+        public static UrlContainer Instance
+        {
+            get { return _Instance; }
+        }
+        public List<String> HtmlContainer
+        {
+            get
+            {
+                return _UrlConllections;
+            }
+        }
+        public  List<String> UrlConllections
         {
             get
             {

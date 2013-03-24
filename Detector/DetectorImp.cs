@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using WebCrawler.CrawlerServiceInterface;
+using WebCrawler.Model;
 
 namespace WebCrawler.Detector
 {
@@ -18,7 +19,11 @@ namespace WebCrawler.Detector
 
         public void Scan(string url)
         {
-            WebRequest request = WebRequest.Create("http://www.baidu.com");
+            ScanContent(url);            
+        }
+        private void ScanContent(string url)
+        {
+            WebRequest request = WebRequest.Create(url);
             // If required by the server, set the credentials.
             request.Credentials = CredentialCache.DefaultCredentials;
             // Get the response.
@@ -31,10 +36,8 @@ namespace WebCrawler.Detector
             StreamReader reader = new StreamReader(dataStream);
             // Read the content.
             string responseFromServer = reader.ReadToEnd();
-           //get document stream from url
-            
-
-            //Parse the text to get the URL and Text
+            //get document stream from url
+            HtmlContainer.Instance.Add(responseFromServer);
         }
     }
 }
