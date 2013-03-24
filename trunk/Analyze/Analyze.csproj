@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Analyze.cs" />
+    <Compile Include="AnalyzeAdapter.cs" />
     <Compile Include="AnalyzeImp.cs" />
+    <Compile Include="HtmlAnalyze.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
