@@ -9,8 +9,8 @@ namespace WebCrawler.Configuration
     {
         public const string urlPatten = @"([\w-]+\.)+[\w-]+(/[\w- ./?%&=]*)?";
         public const string aUrlPatten = @"href\s*=\s*(?:[\'\""\s](?<1>[^\""\']*)[\'\""])";
-        public const string scriptPatten = @"<script[^>]*?>.*?<\/script>";
-        public const string stylePatten = @"<style[^>]*?>.*?</style>";
+        public const string scriptPatten = @"<script(.*?)</script>";
+        public const string stylePatten = @"<style(.*?)</style>";
         public const string htmlLabelPatten = @"<(.[^>]*)>";
         public const string rnPatten = @"([\r\n])[\s]+";
         public const string rightNotePatten = @"-->";
@@ -26,5 +26,10 @@ namespace WebCrawler.Configuration
         public const string copyPatten = @"&(copy|#169);";
         public const string lablePatten = @"&#(\d+);";
         public const string imgPatten = @"<img[^>]*>;";
+        public const string aLablePatten = @"<a(.*?)</a>";
+        public const string liLablePatten = @"<li(.*?)</li>";
+        public const string tdLablePatten = @"<td(.*?)</td>";
+        public const string divLablePatten = @"<div(.*?)</div>";
+        public const string hLablePatten = @"(<h[1-9])(.*?)</(h[1-9])>";
     }
 }
