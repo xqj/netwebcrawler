@@ -3,8 +3,15 @@
   <Interface Name="WebCrawler.CrawlerServiceInterface.DetectorInterface">
     <Position X="4.5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DetectorInterface.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="WebCrawler.CrawlerServiceInterface.AnalyzeInterface">
+    <Position X="3" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AnalyzeInterface.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Microsoft YaHei UI" Size="9" />
