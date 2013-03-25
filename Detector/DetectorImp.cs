@@ -4,6 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Threading;
+using WebCrawler.Analyze;
 using WebCrawler.CrawlerServiceInterface;
 using WebCrawler.Model;
 
@@ -11,8 +13,8 @@ namespace WebCrawler.Detector
 {
     public class DetectorImp : Detector, DetectorInterface
     {
-        private DetectorImp _Instance = new DetectorImp();
-        public DetectorImp Instance
+        private static DetectorImp _Instance = new DetectorImp();
+        public static DetectorInterface Instance
         {
             get { return _Instance; }
         }
@@ -39,5 +41,24 @@ namespace WebCrawler.Detector
             //get document stream from url
             HtmlContainer.Instance.Add(responseFromServer);
         }
+
+
+        public void IndexScan(string url)
+        {
+            ThreadPool.QueueUserWorkItem(new WaitCallback(GetUrlThreadProc));
+            ThreadPool.QueueUserWorkItem(new WaitCallback(GetContentThreadProc));
+        }
+
+        private void GetContentThreadProc(object state)
+        {
+            AnalyzeAdapter.Instance.ProcessingContent();
+        }
+
+        private void GetUrlThreadProc(object state)
+        {
+            AnalyzeAdapter.Instance.ProcessingUrls();
+        }
+
+       
     }
 }
