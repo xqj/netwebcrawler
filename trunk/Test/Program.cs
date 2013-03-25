@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Timers;
 using WebCrawler;
+using WebCrawler.Model;
 
 namespace Test
 {
@@ -11,15 +12,19 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            //Crawler.Instance.OnTimedEvent = RunTest;
-            Crawler.Instance.IndexUrl = "http://www.baidu.com";
-            Crawler.Instance.Interval=1000.0;
+            Crawler.Instance.OnTimedEvent = RunTest;
+            Crawler.Instance.IndexUrl = "http://www.cnblogs.com/";
+            Crawler.Instance.Interval=10000.0;
             Crawler.Instance.Start();
+            Crawler.Instance.Run();           
             Console.ReadLine();
         }
         public static void RunTest(object sender, ElapsedEventArgs e)
         {
-            Console.WriteLine("Hello World!");
+            TextContainer.Instance.TextCollections.ForEach(a =>
+            {
+                Console.WriteLine(a);
+            });
         }
     }
 }

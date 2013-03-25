@@ -39,7 +39,7 @@ namespace WebCrawler
         {
             _timer.Stop();
         }
-        private void Run(object sender, ElapsedEventArgs e)
+        public void Run(object sender, ElapsedEventArgs e)
         {
             var detector = ServerImpFactory.GetDetectorInterface();
             detector.IndexScan(IndexUrl);
@@ -51,6 +51,12 @@ namespace WebCrawler
         {
             get { return _timer.Interval; }
             set { SetInterval(value); } 
+        }
+
+        public void Run()
+        {
+            var detector = ServerImpFactory.GetDetectorInterface();
+            detector.IndexScan(IndexUrl);
         }
     }
 }

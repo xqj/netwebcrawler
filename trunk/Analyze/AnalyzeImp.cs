@@ -22,6 +22,8 @@ namespace WebCrawler.Analyze
             string urlpatten = DefineTable.urlPatten;
             Regex rgx = new Regex(pattern, RegexOptions.IgnoreCase);
             string input=HtmlContainer.Instance.GetForUrl();
+            if (string.IsNullOrEmpty(input))
+                return;
             MatchCollection matches = rgx.Matches(input);
             foreach (Match match in matches)
             {

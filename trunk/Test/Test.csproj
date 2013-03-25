@@ -44,6 +44,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{8a3a76a7-0500-42b9-8812-3df2e651ba89}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WebCrawler\WebCrawler.csproj">
       <Project>{1b3821cd-0efb-4ee3-9e33-86e8e1752c7b}</Project>
       <Name>WebCrawler</Name>
