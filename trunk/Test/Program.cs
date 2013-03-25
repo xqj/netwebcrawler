@@ -13,6 +13,7 @@ namespace Test
         {
             //Crawler.Instance.OnTimedEvent = RunTest;
             Crawler.Instance.IndexUrl = "http://www.baidu.com";
+            Crawler.Instance.Interval=1000.0;
             Crawler.Instance.Start();
             Console.ReadLine();
         }

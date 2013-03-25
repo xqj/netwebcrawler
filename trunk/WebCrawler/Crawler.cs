@@ -25,7 +25,7 @@ namespace WebCrawler
         {
             _timer = new Timer(DefineTable.timerInterval);
             OnTimedEvent = Run;
-            _timer.Elapsed += new ElapsedEventHandler(OnTimedEvent);            
+            _timer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
         }
         public void SetInterval(double interval)
         {
@@ -41,10 +41,16 @@ namespace WebCrawler
         }
         private void Run(object sender, ElapsedEventArgs e)
         {
-            var detector=ServerImpFactory.GetDetectorInterface();
+            var detector = ServerImpFactory.GetDetectorInterface();
             detector.IndexScan(IndexUrl);
         }
 
         public ElapsedEventHandler OnTimedEvent { get; set; }
+
+        public double Interval
+        {
+            get { return _timer.Interval; }
+            set { SetInterval(value); } 
+        }
     }
 }
