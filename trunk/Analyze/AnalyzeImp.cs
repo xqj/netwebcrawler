@@ -11,8 +11,8 @@ namespace WebCrawler.Analyze
 {
     public class AnalyzeImp : Analyze, AnalyzeInterface
     {
-        private AnalyzeImp _Instance = new AnalyzeImp();
-        public AnalyzeImp Instance
+        private static AnalyzeImp _Instance = new AnalyzeImp();
+        public static AnalyzeInterface Instance
         {
             get { return _Instance; }
         }

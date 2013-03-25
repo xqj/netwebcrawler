@@ -3,16 +3,23 @@
   <Class Name="WebCrawler.Model.UrlContainer">
     <Position X="5.75" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <HashCode>AAIAAAAAAAAAAABAQAAEAAAAAAEAAAAAQAAAAAAAAAI=</HashCode>
       <FileName>UrlContainer.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WebCrawler.Model.TextContainer">
     <Position X="4.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAIAAAAAAAAAAABAAAAEAAAAAAAAAAAAQAAAAAAAIAA=</HashCode>
       <FileName>TextContainer.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Enum Name="WebCrawler.Model.enumActionType">
+    <Position X="3" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>enumActionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Microsoft YaHei UI" Size="9" />
 </ClassDiagram>

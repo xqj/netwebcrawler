@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Timers;
 using WebCrawler.Configuration;
+using WebCrawler.Model;
 
 namespace WebCrawler
 {
@@ -14,6 +15,11 @@ namespace WebCrawler
         public static Crawler Instance
         {
             get { return _Instance; }
+        }
+        public string IndexUrl
+        {
+            set;
+            get;
         }
         private Crawler()
         {
@@ -35,7 +41,8 @@ namespace WebCrawler
         }
         private void Run(object sender, ElapsedEventArgs e)
         {
-            //Console.WriteLine("Hello World!");
+            var detector=ServerImpFactory.GetDetectorInterface();
+            detector.IndexScan(IndexUrl);
         }
 
         public ElapsedEventHandler OnTimedEvent { get; set; }

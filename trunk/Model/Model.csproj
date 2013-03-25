@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="enumActionType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TextContainer.cs" />
     <Compile Include="UrlContainer.cs" />

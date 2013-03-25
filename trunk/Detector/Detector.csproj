@@ -49,6 +49,10 @@
     <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Analyze\Analyze.csproj">
+      <Project>{5899e1d8-77a3-4976-b559-f0da29e42acc}</Project>
+      <Name>Analyze</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Configuration\Configuration.csproj">
       <Project>{259bd800-c3a8-4e6c-a7fe-1976cab4b893}</Project>
       <Name>Configuration</Name>

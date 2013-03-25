@@ -9,5 +9,6 @@ namespace WebCrawler.CrawlerServiceInterface
     {
         /// <param name="url">visit url</param>
         void Scan(string url);
+        void IndexScan(string url);
     }
 }

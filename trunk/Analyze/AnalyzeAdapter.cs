@@ -7,10 +7,20 @@ namespace WebCrawler.Analyze
 {
     public class AnalyzeAdapter
     {
-        private AnalyzeAdapter _Instance = new AnalyzeAdapter();
-        public AnalyzeAdapter Instance
+        private static AnalyzeAdapter _Instance = new AnalyzeAdapter();
+        public static AnalyzeAdapter Instance
         {
             get { return _Instance; }
+        }
+
+        public void ProcessingContent()
+        {
+            AnalyzeImp
+        }
+
+        public void ProcessingUrls()
+        {
+            throw new NotImplementedException();
         }
     }
 }
