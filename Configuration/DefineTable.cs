@@ -31,6 +31,6 @@ namespace WebCrawler.Configuration
         public const string tdLablePatten = @"<td(.*?)</td>";
         public const string divLablePatten = @"<div(.*?)</div>";
         public const string hLablePatten = @"(<h[1-9])(.*?)</(h[1-9])>";
-        public const double timerInterval = 36000.0;
+        public const double timerInterval = 3600000.0;
     }
 }
