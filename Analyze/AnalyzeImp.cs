@@ -21,7 +21,7 @@ namespace WebCrawler.Analyze
             string pattern = DefineTable.aUrlPatten;
             string urlpatten = DefineTable.urlPatten;
             Regex rgx = new Regex(pattern, RegexOptions.IgnoreCase);
-            string input=HtmlContainer.Instance.Get();
+            string input=HtmlContainer.Instance.GetForUrl();
             MatchCollection matches = rgx.Matches(input);
             foreach (Match match in matches)
             {
@@ -33,8 +33,8 @@ namespace WebCrawler.Analyze
 
         public void GetText()
         {
-            var temp = HtmlContainer.Instance.Get();
-            TextContainer.Instance.Add(HtmlAnalyze.NoHTML(temp));
+            var temp = HtmlContainer.Instance.GetForContent();
+            TextContainer.Instance.Add(HtmlAnalyze.GetCoreText(temp));
         }
        
     }

@@ -11,7 +11,8 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            Crawler.Instance.OnTimedEvent = RunTest;
+            //Crawler.Instance.OnTimedEvent = RunTest;
+            Crawler.Instance.IndexUrl = "http://www.baidu.com";
             Crawler.Instance.Start();
             Console.ReadLine();
         }

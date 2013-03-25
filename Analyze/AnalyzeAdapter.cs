@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using WebCrawler.Model;
 
 namespace WebCrawler.Analyze
 {
@@ -15,12 +16,18 @@ namespace WebCrawler.Analyze
 
         public void ProcessingContent()
         {
-            AnalyzeImp.Instance.GetText();
+            while (!HtmlContainer.Instance.IsEmpty)
+            {
+                AnalyzeImp.Instance.GetText();
+            }
         }
 
         public void ProcessingUrls()
         {
-            AnalyzeImp.Instance.GetUrls();
+            while (!HtmlContainer.Instance.IsEmpty)
+            {
+                AnalyzeImp.Instance.GetUrls();
+            }
         }
     }
 }

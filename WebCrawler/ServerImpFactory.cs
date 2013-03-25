@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using WebCrawler.CrawlerServiceInterface;
+using WebCrawler.Detector;
 using WebCrawler.Model;
 
 namespace WebCrawler
@@ -13,7 +14,7 @@ namespace WebCrawler
 
        internal static DetectorInterface GetDetectorInterface()
         {
-            return Detector.DetectorImp.Instance;
+            return DetectorImp.Instance;
         }
     }
 }
