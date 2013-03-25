@@ -7,25 +7,37 @@ using WebCrawler.Configuration;
 
 namespace WebCrawler
 {
-   public class Crawler
+    public class Crawler
     {
-       private Crawler _Instance = new Crawler();
-       private Timer _timer;
-       private Crawler()
-       {
-           _timer = new Timer(DefineTable.timerInterval);         
-       }
-       public void SetInterval(double interval)
-       {
-           _timer.Interval = interval;
-       }
-       public void Start()
-       {
-           _timer.Start();
-       }
-       public void Stop()
-       {
-           _timer.Stop();
-       }
+        private static Crawler _Instance = new Crawler();
+        private Timer _timer;
+        public static Crawler Instance
+        {
+            get { return _Instance; }
+        }
+        private Crawler()
+        {
+            _timer = new Timer(DefineTable.timerInterval);
+            OnTimedEvent = Run;
+            _timer.Elapsed += new ElapsedEventHandler(OnTimedEvent);            
+        }
+        public void SetInterval(double interval)
+        {
+            _timer.Interval = interval;
+        }
+        public void Start()
+        {
+            _timer.Start();
+        }
+        public void Stop()
+        {
+            _timer.Stop();
+        }
+        private void Run(object sender, ElapsedEventArgs e)
+        {
+            //Console.WriteLine("Hello World!");
+        }
+
+        public ElapsedEventHandler OnTimedEvent { get; set; }
     }
 }
