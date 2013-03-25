@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace WebCrawler.WebCrawler
+namespace WebCrawler
 {
    public class Crawler
     {
@@ -15,6 +15,9 @@ namespace WebCrawler.WebCrawler
        {
        }
        public void Start()
+       {
+       }
+       public void Stop()
        {
        }
     }
