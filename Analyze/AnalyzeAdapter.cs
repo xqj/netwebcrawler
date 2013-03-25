@@ -15,12 +15,12 @@ namespace WebCrawler.Analyze
 
         public void ProcessingContent()
         {
-            AnalyzeImp
+            AnalyzeImp.Instance.GetText();
         }
 
         public void ProcessingUrls()
         {
-            throw new NotImplementedException();
+            AnalyzeImp.Instance.GetUrls();
         }
     }
 }

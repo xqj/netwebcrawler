@@ -8,6 +8,7 @@ namespace WebCrawler.Model
     public class HtmlContainer
     {
         private List<string> _HtmlContainer = new List<string>();
+        private List<string> _HtmlContainerHistory = new List<string>();
         private static HtmlContainer _Instance = new HtmlContainer();
         public static HtmlContainer Instance
         {
@@ -22,10 +23,20 @@ namespace WebCrawler.Model
         }
         public string Get()
         {
-            if(_HtmlContainer.Count>0)
-                return _HtmlContainer[0];
+            if (_HtmlContainer.Count > 0)
+            {
+                string temp = _HtmlContainer[0];
+                _HtmlContainer.RemoveAt(0);
+                AddHistory(temp);               
+                return temp;
+            }
             else
                 return null;
+        }
+
+        private void AddHistory(string temp)
+        {
+            _HtmlContainerHistory.Add(temp);
         }
         public void Add(string newText)
         {

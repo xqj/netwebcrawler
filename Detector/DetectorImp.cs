@@ -45,6 +45,7 @@ namespace WebCrawler.Detector
 
         public void IndexScan(string url)
         {
+            Scan(url);      
             ThreadPool.QueueUserWorkItem(new WaitCallback(GetUrlThreadProc));
             ThreadPool.QueueUserWorkItem(new WaitCallback(GetContentThreadProc));
         }
