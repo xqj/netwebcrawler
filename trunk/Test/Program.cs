@@ -15,7 +15,7 @@ namespace Test
             Crawler.Instance.OnTimedEvent = RunTest;
             Crawler.Instance.IndexUrl = "http://www.cnblogs.com/";
             Crawler.Instance.Interval=10000.0;
-            Crawler.Instance.Start();
+            //Crawler.Instance.Start();
             Crawler.Instance.Run();           
             Console.ReadLine();
         }
