@@ -13,7 +13,7 @@ namespace WebCrawler.Model
         {
             get { return _Instance; }
         }
-        public List<String> HtmlContainer
+        public List<String> HtmlCollections
         {
             get
             {
