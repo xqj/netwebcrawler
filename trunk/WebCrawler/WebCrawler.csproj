@@ -38,7 +38,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Crawler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Analyze\Analyze.csproj">
+      <Project>{5899e1d8-77a3-4976-b559-f0da29e42acc}</Project>
+      <Name>Analyze</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Configuration\Configuration.csproj">
+      <Project>{259bd800-c3a8-4e6c-a7fe-1976cab4b893}</Project>
+      <Name>Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CrawlerServiceInterface\CrawlerServiceInterface.csproj">
+      <Project>{a0a7d328-81a2-48d7-94d4-07baac07f5cf}</Project>
+      <Name>CrawlerServiceInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Detector\Detector.csproj">
+      <Project>{627492c7-d995-4132-a49f-0efc6797f080}</Project>
+      <Name>Detector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{8a3a76a7-0500-42b9-8812-3df2e651ba89}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
