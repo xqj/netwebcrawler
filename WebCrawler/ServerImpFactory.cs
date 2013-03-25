@@ -10,8 +10,6 @@ namespace WebCrawler
 {
    public class ServerImpFactory
     {
-
-
        internal static DetectorInterface GetDetectorInterface()
         {
             return DetectorImp.Instance;
